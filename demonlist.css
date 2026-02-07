@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    color: #c9d1d9;
+}
+
+.demonlist-particles-canvas {
+    pointer-events: none;
+}
+
+.demonlist-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.demonlist-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #161b22;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border: 1px solid #30363d;
+}
+
+.demonlist-title {
+    color: #f0f6fc;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.demonlist-main {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.demonlist-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.demonlist-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.demonlist-list {
+    list-style: none;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.demonlist-item {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 15px;
+    transition: all 0.2s ease;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.demonlist-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    border-color: #58a6ff;
+}
+
+.demonlist-thumbnail {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid #30363d;
+}
+
+.demonlist-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.demonlist-header-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.demonlist-rank {
+    color: #f85149;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.demonlist-name {
+    color: #f0f6fc;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.demonlist-id {
+    background: #f85149;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin-left: auto;
+}
+
+.demonlist-author {
+    color: #8b949e;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.demonlist-author strong {
+    color: #f0f6fc;
+    font-weight: 600;
+}
+
+.demonlist-points {
+    color: #8b949e;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.demonlist-id-field {
+    color: #f85149;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.demonlist-editors,
+.demonlist-helpers {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.demonlist-sidebar-title {
+    color: #f0f6fc;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 6px;
+}
+
+.demonlist-editor-list,
+.demonlist-helper-list {
+    list-style: none;
+}
+
+.demonlist-editor-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #21262d;
+}
+
+.demonlist-editor-item:last-child {
+    border-bottom: none;
+}
+
+.demonlist-editor-name {
+    color: #f0f6fc;
+    font-weight: 500;
+}
+
+.demonlist-editor-role {
+    color: #8b949e;
+    font-size: 0.8rem;
+    background: #21262d;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.demonlist-helper-item {
+    padding: 5px 0;
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+.demonlist-helper-name {
+    color: #f0f6fc;
+}
+
+.demonlist-footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #30363d;
+    margin-top: 30px;
+    background: #161b22;
+    border-radius: 6px;
+}
+
+.demonlist-made-by {
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+.demonlist-made-by a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.demonlist-made-by a:hover {
+    text-decoration: underline;
+}
+
+.back-section {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px 20px;
+}
+
+.back-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #30363d;
+    color: #f0f6fc;
+    text-decoration: none;
+    border: 1px solid #58a6ff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+    background: #58a6ff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-back .material-symbols-outlined {
+    font-size: 18px;
+}
+
+@media (max-width: 968px) {
+    .demonlist-main {
+        flex-direction: column;
+    }
+    
+    .demonlist-sidebar {
+        width: 100%;
+        order: -1;
+    }
+    
+    .demonlist-editors,
+    .demonlist-helpers {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .demonlist-editors {
+        flex: 1;
+    }
+    
+    .demonlist-helpers {
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .demonlist-container {
+        padding: 15px;
+    }
+    
+    .demonlist-title {
+        font-size: 1.5rem;
+    }
+    
+    .demonlist-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .demonlist-thumbnail {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 10px;
+    }
+    
+    .demonlist-header-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .demonlist-id {
+        margin-left: 0;
+    }
+    
+    .demonlist-editors,
+    .demonlist-helpers {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
