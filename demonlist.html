@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,16 @@
     <title>Demon List</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
     <link rel="stylesheet" href="demonlist.css">
 </head>
+
 <body>
-    <canvas id="demonlist-particles-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></canvas>
-    
+    <canvas id="demonlist-particles-canvas"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></canvas>
+
     <div class="demonlist-container">
         <header class="demonlist-header">
             <h1 class="demonlist-title">Demonlist</h1>
@@ -26,15 +31,28 @@
             <div class="demonlist-content">
                 <ul class="demonlist-list">
                     <li class="demonlist-item">
-                        <img src="jumping.jpg" alt="Demon Thumbnail" class="demonlist-thumbnail">
+                        <img src="GR.png" alt="Demon Thumbnail" class="demonlist-thumbnail">
                         <div class="demonlist-info">
                             <div class="demonlist-header-item">
                                 <h2 class="demonlist-rank">#1</h2>
+                                <h2 class="demonlist-name">Geometrycal Rainbow</h2>
+
+                            </div>
+                            <p class="demonlist-author">published by <strong>PAFLE</strong></p>
+
+                            <p class="demonlist-id-field">ID: 125</p>
+                        </div>
+                    </li>
+                    <li class="demonlist-item">
+                        <img src="jumping.jpg" alt="Demon Thumbnail" class="demonlist-thumbnail">
+                        <div class="demonlist-info">
+                            <div class="demonlist-header-item">
+                                <h2 class="demonlist-rank">#2</h2>
                                 <h2 class="demonlist-name">Jumping</h2>
-                                
+
                             </div>
                             <p class="demonlist-author">published by <strong>bozkurt</strong></p>
-                            
+
                             <p class="demonlist-id-field">ID: 110</p>
                         </div>
                     </li>
@@ -43,12 +61,12 @@
                         <img src="minidash.jpg" alt="Demon Thumbnail" class="demonlist-thumbnail">
                         <div class="demonlist-info">
                             <div class="demonlist-header-item">
-                                <h2 class="demonlist-rank">#2</h2>
+                                <h2 class="demonlist-rank">#3</h2>
                                 <h2 class="demonlist-name">Mini Dash</h2>
-                                
+
                             </div>
                             <p class="demonlist-author">published by <strong>Dieyiko</strong></p>
-                            
+
                             <p class="demonlist-id-field">ID: 112</p>
                         </div>
                     </li>
@@ -57,12 +75,12 @@
                         <img src="clickermania.jpg" alt="Demon Thumbnail" class="demonlist-thumbnail">
                         <div class="demonlist-info">
                             <div class="demonlist-header-item">
-                                <h2 class="demonlist-rank">#3</h2>
+                                <h2 class="demonlist-rank">#4</h2>
                                 <h2 class="demonlist-name">Clicker Mania</h2>
-                                
+
                             </div>
                             <p class="demonlist-author">published by <strong>ducky</strong></p>
-                            
+
                             <p class="demonlist-id-field">ID: 114</p>
                         </div>
                     </li>
@@ -81,7 +99,7 @@
                     </ul>
                 </section>
 
-            
+
             </aside>
         </main>
 
@@ -115,7 +133,7 @@
                 this.resize();
                 this.createParticles();
                 this.animate();
-                
+
                 window.addEventListener('resize', () => this.resize());
                 window.addEventListener('mousemove', (e) => {
                     this.mouseX = e.clientX;
@@ -151,7 +169,7 @@
                     const dx = this.mouseX - particle.x;
                     const dy = this.mouseY - particle.y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
-                    
+
                     if (distance < 100) {
                         const force = (100 - distance) / 100;
                         particle.x -= (dx / distance) * force * 2;
@@ -168,7 +186,7 @@
 
             drawParticles() {
                 this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-                
+
                 this.particles.forEach(particle => {
                     this.ctx.beginPath();
                     this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -182,7 +200,7 @@
                         const dx = particle1.x - particle2.x;
                         const dy = particle1.y - particle2.y;
                         const distance = Math.sqrt(dx * dx + dy * dy);
-                        
+
                         if (distance < 150) {
                             this.ctx.beginPath();
                             this.ctx.moveTo(particle1.x, particle1.y);
@@ -207,4 +225,5 @@
         });
     </script>
 </body>
+
 </html>
